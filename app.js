@@ -45,7 +45,7 @@ let $buttonContact = d.querySelector('#button_contact')
 let $closeDialog = d.querySelector('.menu_dialog')
 let $dialog = d.getElementById('dialog')
 let $body = d.getElementById('body')
-let $buttonTop = d.getElementById('button_top')
+let $buttonTop = d.querySelector('.button_top')
 let $dinamicContent = d.getElementById('dinamic_content')
 
 
@@ -73,9 +73,6 @@ function dinamism(data, container) {
 d.addEventListener('click', e => {
     let target = e.target
     e.preventDefault()
-    console.log(target)
-    console.log($buttonContact)
-
     if (target === $buttonContact) {
         $dialog.classList.remove('disabled')
         $dialog.classList.add('active')
@@ -84,7 +81,8 @@ d.addEventListener('click', e => {
         $dialog.classList.remove('active')
         $dialog.classList.add('disabled')
     }
-    if (target == $buttonTop) {
+    if (target == $buttonTop[0] || target == $buttonTop[1]) {
+        console.log('hola soy', $buttonTop)
         w.scrollTo({ top: 0, right: 0, behavior: 'smooth' })
     }
 })

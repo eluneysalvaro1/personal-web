@@ -8,6 +8,9 @@ body {
   position: relative;
   padding: 0;
   bottom: 80px;
+  background-image: url("./helpers/img/back1.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .header {
