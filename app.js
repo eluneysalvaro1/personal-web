@@ -45,7 +45,7 @@ let $buttonContact = d.querySelector('#button_contact')
 let $closeDialog = d.querySelector('.menu_dialog')
 let $dialog = d.getElementById('dialog')
 let $body = d.getElementById('body')
-let $buttonTop = d.querySelector('.button_top')
+let $buttonTop = d.querySelectorAll('.button_top')
 let $dinamicContent = d.getElementById('dinamic_content')
 
 
@@ -87,14 +87,15 @@ d.addEventListener('click', e => {
     }
 })
 
+console.log($buttonTop)
 
 w.addEventListener('scroll', e => {
     if (w.scrollY >= 0 && w.scrollY <= 350) {
-        $buttonTop.classList.remove('active')
-        $buttonTop.classList.add('disabled')
+        $buttonTop[0].classList.remove('active')
+        $buttonTop[0].classList.add('disabled')
     } else if (w.scrollY > 350) {
-        $buttonTop.classList.remove('disabled')
-        $buttonTop.classList.add('active')
+        $buttonTop[0].classList.remove('disabled')
+        $buttonTop[0].classList.add('active')
 
     }
 })

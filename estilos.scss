@@ -12,7 +12,7 @@ body {
     bottom: 80px;
     background-image: url('./helpers/img/back1.svg');
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
 }
 
 @mixin buttonContact {
@@ -36,20 +36,16 @@ body {
 .header {
     display: flex;
     flex-direction: column;
+    margin: auto;
+    max-width: 1250px;
     padding: 25px;
     .nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        flex-wrap: wrap;
         .nav_buttons {
             display: flex;
             align-items: center;
-            .button_burger_menu {
-                background: none;
-                border: none;
-                margin-top: 5px;
-            }
         }
     }
     .button_contact {
@@ -104,6 +100,20 @@ body {
             padding: 40px;
             width: 40%;
         }
+    }
+}
+
+.tools {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    text-align: center;
+    margin: 50px auto;
+    h3 {
+        font-size: 30px;
+        animation: changeColor 4s infinite;
+        animation-timing-function: ease;
+        animation-direction: alternate;
     }
 }
 
@@ -175,7 +185,6 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    overflow-x: scroll;
 }
 
 .dinamic_img {
@@ -218,6 +227,15 @@ body {
     .data_container:hover {
         animation: movement 1s alternate infinite;
     }
+}
+
+#who_container {
+    display: flex;
+    max-width: 1000px;
+    justify-content: center;
+    margin: 25vh auto;
+    width: 80%;
+    #who_data {}
 }
 
 @keyframes movement {
