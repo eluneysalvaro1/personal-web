@@ -114,17 +114,20 @@ body {
     @include buttonContactHover;
 }
 
-#button_download_cv {
+.button_download_cv {
     background: none;
     border: none;
     font-weight: 700;
+    text-align: center;
     padding: 5px;
     margin-right: 35px;
     border-bottom: 2px solid #dfdfdf;
     cursor: pointer;
+    color: #292929;
+    text-decoration: none;
 }
 
-#button_download_cv:hover {
+.button_download_cv:hover {
     border-bottom: 2px solid #292929;
     box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.75);
     -webkit-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.75);
@@ -551,7 +554,7 @@ body {
             border-radius: 0px 0px 25px 25px;
         }
     }
-    #button_download_cv {
+    .button_download_cv {
         margin: 10px auto;
         width: 100%;
     }

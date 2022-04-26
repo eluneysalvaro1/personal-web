@@ -39,17 +39,17 @@ let data = [{
         url: "./helpers/img/sass.svg"
     }
 ]
-let heightWindow = w.innerHeight
+let heightWindow = 3649
 
 
 let $paragraph = d.getElementById("paragraph_change")
-let $buttonContact = d.querySelector('#button_contact')
+let $buttonContact = d.querySelectorAll('#button_contact')
 let $closeDialog = d.querySelector('.menu_dialog')
 let $dialog = d.getElementById('dialog')
 let $body = d.getElementById('body')
 let $buttonTop = d.querySelectorAll('.button_top')
 let $dinamicContent = d.getElementById('dinamic_content')
-let $buttonDownloadCv = d.getElementById('download_cv')
+let $buttonDownloadCv = d.querySelector('.button_download_cv')
 
 
 const changeParagraph = () => {
@@ -76,26 +76,22 @@ function dinamism(data, container) {
 d.addEventListener('click', e => {
     let target = e.target
     e.preventDefault()
-    if (target === $buttonContact) {
-        console.log(heightWindow)
-
+    if (target === $buttonContact[0] || target === $buttonContact[1]) {
         w.scrollTo({ top: heightWindow, right: 0, behavior: 'smooth' })
     }
     if (target == $buttonTop[0] || target == $buttonTop[1]) {
-        console.log('hola soy', $buttonTop)
         w.scrollTo({ top: 0, right: 0, behavior: 'smooth' })
     }
     if (target == $buttonDownloadCv) {
-
-        console.log('buenas')
-
-
+        $buttonDownloadCv.setAttribute("download", 'CV.pdf')
+        $buttonDownloadCv.setAttribute("href", 'helpers/files/CV.pdf')
     }
 })
 
 console.log($buttonTop)
 
 w.addEventListener('scroll', e => {
+
     if (w.scrollY >= 0 && w.scrollY <= 350) {
         $buttonTop[0].classList.remove('active')
         $buttonTop[0].classList.add('disabled')
