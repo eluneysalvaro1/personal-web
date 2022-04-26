@@ -84,15 +84,15 @@
                 <hr>
                 <div class="form">
                     <h3>Charlemos</h3>
-                    <form action="">
-                        <input type="text" placeholder="Tu nombre">
-                        <input type="mail" placeholder="Tu mail">
-                        <input type="text" placeholder="¿Que podria aportar a tu equipo?">
+                    <form target="_top" action="" method="post">
+                        <input id="name" type="text" placeholder="Tu nombre">
+                        <input id="email" type="mail" placeholder="Tu mail">
+                        <input id="mesage" type="text" placeholder="¿Que podria aportar a tu equipo?">
                     </form>
                 </div>
             </div>
             <div class="second">
-                <button class="send button_contact">Enviar</button>
+                <button class="send button_contact">Enviar 🖐</button>
             </div>
         </div>
     </main>
@@ -109,6 +109,9 @@
     <script type="module" src="app.js"></script>
     <script src="https://kit.fontawesome.com/3c7e7d9f46.js" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script type="text/javascript" src="validation.js">
+    </script>
 </body>
 
 </html>

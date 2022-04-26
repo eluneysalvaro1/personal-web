@@ -86,6 +86,7 @@ d.addEventListener('click', e => {
         $buttonDownloadCv.setAttribute("download", 'CV.pdf')
         $buttonDownloadCv.setAttribute("href", 'helpers/files/CV.pdf')
     }
+
 })
 
 console.log($buttonTop)
