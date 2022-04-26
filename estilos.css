@@ -299,6 +299,8 @@ body {
           justify-content: center;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  width: 90%;
+  min-width: 350px;
 }
 
 .dinamic_img {
@@ -552,6 +554,168 @@ body {
   }
   100% {
     color: #00d4ff;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #dinamic_content {
+    overflow-x: auto;
+  }
+  #data {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin: auto;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  #data .data_container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 25px auto;
+    padding: 25px;
+    box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.5);
+    -webkit-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.5);
+    -moz-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.5);
+    border-radius: 25px;
+    width: 40%;
+    min-width: 450px;
+  }
+  #data .data_container h3 {
+    color: #041d5e;
+    font-size: 35px;
+    margin: 0px;
+  }
+  #data .data_container:hover {
+    -webkit-animation: movement 1s alternate infinite;
+            animation: movement 1s alternate infinite;
+  }
+  .header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin: auto;
+    max-width: 1250px;
+    padding: 25px;
+  }
+  .header .nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .nav .nav_buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .logo {
+    text-align: left;
+  }
+  .header .logo h2,
+  .header .logo h3 {
+    background: #041d5e;
+    background: -webkit-gradient(linear, left top, right top, from(#041d5e), color-stop(44%, #090979), to(#00d4ff));
+    background: linear-gradient(90deg, #041d5e 0%, #090979 44%, #00d4ff 100%);
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    margin: 2px;
+  }
+  .header .logo h2 {
+    font-size: 18px;
+  }
+  .header .logo h3 {
+    font-size: 14px;
+  }
+  .header .presentation {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: auto;
+    margin-top: 5%;
+    padding: 50px;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    max-width: 1200px;
+  }
+  .header .presentation .presentation_text {
+    width: 60%;
+    min-width: 400px;
+  }
+  .header .presentation .presentation_text h1 {
+    text-align: center;
+    font-size: 45px;
+  }
+  .header .presentation .presentation_text b {
+    -webkit-animation: changeColor 4s infinite;
+            animation: changeColor 4s infinite;
+    -webkit-animation-timing-function: ease;
+            animation-timing-function: ease;
+    -webkit-animation-direction: alternate;
+            animation-direction: alternate;
+  }
+  .header .presentation .presentation_text div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .presentation .presentation_text div h3 {
+    padding-right: 10px;
+  }
+  .header .presentation .presentation_text #paragraph_change {
+    display: none;
+  }
+  .header .presentation .presentation_animation {
+    padding: 40px;
+    width: 40%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .header .presentation .presentation_animation #lottie {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #dinamic_content {
+    overflow-x: scroll;
+    width: 100%;
   }
 }
 /*# sourceMappingURL=estilos.css.map */

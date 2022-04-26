@@ -75,12 +75,7 @@ d.addEventListener('click', e => {
     let target = e.target
     e.preventDefault()
     if (target === $buttonContact) {
-        $dialog.classList.remove('disabled')
-        $dialog.classList.add('active')
-    }
-    if (target == $closeDialog) {
-        $dialog.classList.remove('active')
-        $dialog.classList.add('disabled')
+
     }
     if (target == $buttonTop[0] || target == $buttonTop[1]) {
         console.log('hola soy', $buttonTop)
