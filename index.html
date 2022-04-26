@@ -85,14 +85,14 @@
                 <div class="form">
                     <h3>Charlemos</h3>
                     <form id="form" target="_blank" action="https://formsubmit.co/eluneyjsalvaro@gmail.com" method="POST">
-                        <input id="name" type="text" placeholder="Tu nombre">
-                        <input id="email" type="mail" placeholder="Tu mail">
-                        <input id="mesage" type="text" placeholder="¿Que podria aportar a tu equipo?">
+                        <input id="name" autocomplete="off" type="text" name="name" placeholder="Tu nombre" required>
+                        <input id="email" autocomplete="off" type="mail" name="email" placeholder="Tu mail" required>
+                        <input id="mesage" autocomplete="off" type="text" name="content" required placeholder="¿Que podria aportar a tu equipo?">
                     </form>
                 </div>
             </div>
             <div class="second">
-                <button class="send button_contact">Enviar 🖐</button>
+                <button type="submit" class="send button_contact">Enviar 🖐</button>
             </div>
         </div>
     </main>
