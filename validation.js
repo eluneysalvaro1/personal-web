@@ -1,7 +1,7 @@
 let d = document
 
 let $sendForm = d.querySelector('.send')
-let $form
+let $form = d.getElementById('form')
 
 
 d.addEventListener('click', e => {
@@ -45,10 +45,7 @@ d.addEventListener('click', e => {
         if (valid.name == true &&
             valid.email == true &&
             valid.mesage == true) {
-
-            valid.name = $name.value
-            valid.email = $email.value
-            valid.mesage = $mesage.value
+            $form.submit()
         }
 
 
