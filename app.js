@@ -39,6 +39,8 @@ let data = [{
         url: "./helpers/img/sass.svg"
     }
 ]
+let heightWindow = w.innerHeight
+
 
 let $paragraph = d.getElementById("paragraph_change")
 let $buttonContact = d.querySelector('#button_contact')
@@ -75,7 +77,9 @@ d.addEventListener('click', e => {
     let target = e.target
     e.preventDefault()
     if (target === $buttonContact) {
+        console.log(heightWindow)
 
+        w.scrollTo({ top: heightWindow, right: 0, behavior: 'smooth' })
     }
     if (target == $buttonTop[0] || target == $buttonTop[1]) {
         console.log('hola soy', $buttonTop)

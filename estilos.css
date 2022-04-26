@@ -826,7 +826,8 @@ body {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    height: 80%;
+    text-align: center;
+    height: 100%;
   }
   #dialog .first .info {
     display: -webkit-box;
@@ -838,7 +839,7 @@ body {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    width: 48%;
+    width: 100%;
     background: #041d5e;
     background: -webkit-gradient(linear, left top, right top, from(#041d5e), color-stop(44%, #090979), to(#00d4ff));
     background: linear-gradient(90deg, #041d5e 0%, #090979 44%, #00d4ff 100%);
@@ -846,8 +847,9 @@ body {
     -webkit-background-clip: text;
   }
   #dialog .first hr {
-    width: 3px;
-    margin: 35px;
+    width: 90%;
+    margin: auto;
+    border: 1px solid #dfdfdf;
   }
   #dialog .first .form {
     display: -webkit-box;
@@ -861,7 +863,8 @@ body {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    width: 48%;
+    width: 100%;
+    margin-bottom: 15px;
   }
   #dialog .first .form form {
     display: -webkit-box;

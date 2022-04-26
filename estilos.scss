@@ -572,27 +572,30 @@ body {
         .first {
             display: flex;
             flex-direction: column;
-            height: 80%;
+            text-align: center;
+            height: 100%;
             .info {
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                width: 48%;
+                width: 100%;
                 background: rgb(4, 29, 94);
                 background: linear-gradient(90deg, rgba(4, 29, 94, 1) 0%, rgba(9, 9, 121, 1) 44%, rgba(0, 212, 255, 1) 100%);
                 -webkit-text-fill-color: transparent;
                 -webkit-background-clip: text;
             }
             hr {
-                width: 3px;
-                margin: 35px;
+                width: 90%;
+                margin: auto;
+                border: 1px solid #dfdfdf;
             }
             .form {
                 display: flex;
                 flex-direction: column;
                 text-align: center;
                 justify-content: center;
-                width: 48%;
+                width: 100%;
+                margin-bottom: 15px;
                 form {
                     display: flex;
                     flex-direction: column;
