@@ -48,12 +48,6 @@ body {
             align-items: center;
         }
     }
-    .button_contact {
-        @include buttonContact
-    }
-    .button_contact:hover {
-        @include buttonContactHover;
-    }
     .logo {
         text-align: left;
         h2,
@@ -78,8 +72,10 @@ body {
         padding: 50px;
         align-items: center;
         flex-wrap: wrap;
+        max-width: 1200px;
         .presentation_text {
             width: 60%;
+            min-width: 600px;
             h1 {
                 font-size: 55px;
             }
@@ -99,8 +95,34 @@ body {
         .presentation_animation {
             padding: 40px;
             width: 40%;
+            min-width: 400px;
         }
     }
+}
+
+.button_contact {
+    @include buttonContact
+}
+
+.button_contact:hover {
+    @include buttonContactHover;
+}
+
+#button_download_cv {
+    background: none;
+    border: none;
+    font-weight: 700;
+    padding: 5px;
+    margin-right: 35px;
+    border-bottom: 2px solid #dfdfdf;
+    cursor: pointer;
+}
+
+#button_download_cv:hover {
+    border-bottom: 2px solid #292929;
+    box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.75);
+    -webkit-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.75);
+    -moz-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.75);
 }
 
 .tools {
@@ -120,14 +142,14 @@ body {
 #dialog {
     display: flex;
     flex-direction: column;
-    width: 60%;
+    width: 90%;
     height: 60vh;
     padding: 20px;
     border: 2px solid #dfdfdf;
     border-radius: 25px;
     z-index: 60;
     pointer-events: all;
-    margin: auto;
+    margin: 20vh auto;
     .button_contact {
         display: block;
     }
@@ -139,6 +161,10 @@ body {
             justify-content: center;
             align-items: center;
             width: 48%;
+            background: rgb(4, 29, 94);
+            background: linear-gradient(90deg, rgba(4, 29, 94, 1) 0%, rgba(9, 9, 121, 1) 44%, rgba(0, 212, 255, 1) 100%);
+            -webkit-text-fill-color: transparent;
+            -webkit-background-clip: text;
         }
         hr {
             width: 3px;
@@ -201,12 +227,38 @@ body {
     filter: grayscale(0);
 }
 
+#footer {
+    display: flex;
+    width: 80%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+    #icons_link {
+        display: flex;
+        margin: auto;
+        a {
+            text-decoration: none;
+            color: #292929;
+            padding: 15px;
+            font-weight: 700;
+            font-size: 35px;
+        }
+        #linkedin:hover {
+            color: #00d4ff
+        }
+        #github:hover {
+            color: #0A0A0A
+        }
+    }
+}
+
 #data {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     max-width: 1150px;
     margin: auto;
+    flex-wrap: wrap;
     .data_container {
         display: flex;
         justify-content: space-around;
@@ -218,6 +270,8 @@ body {
         -webkit-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.50);
         -moz-box-shadow: -1px 17px 42px -12px rgba(89, 89, 89, 0.50);
         border-radius: 25px;
+        width: 40%;
+        min-width: 450px;
         h3 {
             color: #041d5e;
             font-size: 35px;
@@ -233,9 +287,32 @@ body {
     display: flex;
     max-width: 1000px;
     justify-content: center;
+    flex-wrap: wrap;
     margin: 25vh auto;
     width: 80%;
-    #who_data {}
+}
+
+#who_data {
+    width: 50%;
+    margin: auto;
+    h1 {
+        text-align: center;
+        animation: changeColor 4s infinite;
+        animation-timing-function: ease;
+        animation-direction: alternate;
+    }
+    p {
+        padding-right: 5vw;
+    }
+}
+
+#who_image {
+    width: 50%;
+    img {
+        width: 100%;
+        filter: grayscale(0.7);
+        border-radius: 0px 25px 25px 0px;
+    }
 }
 
 @keyframes movement {

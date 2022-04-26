@@ -47,6 +47,7 @@ let $dialog = d.getElementById('dialog')
 let $body = d.getElementById('body')
 let $buttonTop = d.querySelectorAll('.button_top')
 let $dinamicContent = d.getElementById('dinamic_content')
+let $buttonDownloadCv = d.getElementById('download_cv')
 
 
 const changeParagraph = () => {
@@ -85,6 +86,12 @@ d.addEventListener('click', e => {
         console.log('hola soy', $buttonTop)
         w.scrollTo({ top: 0, right: 0, behavior: 'smooth' })
     }
+    if (target == $buttonDownloadCv) {
+
+        console.log('buenas')
+
+
+    }
 })
 
 console.log($buttonTop)
@@ -99,6 +106,8 @@ w.addEventListener('scroll', e => {
 
     }
 })
+
+
 
 
 
