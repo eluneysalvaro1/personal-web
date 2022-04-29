@@ -50,6 +50,8 @@ let $body = d.getElementById('body')
 let $buttonTop = d.querySelectorAll('.button_top')
 let $dinamicContent = d.getElementById('dinamic_content')
 let $buttonDownloadCv = d.querySelector('.button_download_cv')
+let $github = d.getElementById('github')
+let $linkedin = d.getElementById('linkedin')
 
 
 const changeParagraph = () => {
@@ -75,7 +77,6 @@ function dinamism(data, container) {
 
 d.addEventListener('click', e => {
     let target = e.target
-    e.preventDefault()
     if (target === $buttonContact[0] || target === $buttonContact[1]) {
         w.scrollTo({ top: heightWindow, right: 0, behavior: 'smooth' })
     }
@@ -83,8 +84,13 @@ d.addEventListener('click', e => {
         w.scrollTo({ top: 0, right: 0, behavior: 'smooth' })
     }
     if (target == $buttonDownloadCv) {
-        $buttonDownloadCv.setAttribute("download", 'CV.pdf')
-        $buttonDownloadCv.setAttribute("href", 'helpers/files/CV.pdf')
+        w.open('/helpers/files/CV.pdf', '_blank')
+    }
+    if (target == $linkedin) {
+        w.open('https://www.linkedin.com/in/eluney-salvaro-5448071b9/', '_blank')
+    }
+    if (target == $github) {
+        w.open('https://github.com/eluneysalvaro1', '_blank')
     }
 
 })
@@ -102,11 +108,6 @@ w.addEventListener('scroll', e => {
 
     }
 })
-
-
-
-
-
 
 dinamism(data, $dinamicContent)
 changeParagraph()
